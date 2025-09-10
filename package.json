@@ -1,5 +1,6 @@
 {
   "name": "be-mxh",
+  "description": "Express backend service",
   "version": "0.0.0",
   "private": true,
   "scripts": {
