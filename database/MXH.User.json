@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "68b5be50b5da6ee2110a095d"
+  },
+  "Name": "Huan JS",
+  "Password": "$2b$10$atnzVsw731luDqwB70lBNeRQwT0UpVLN.nR8D8aDUc4GWlKoK8O6C",
+  "SDT": "0369594026",
+  "Avatar": "1756741200273.jpg",
+  "CoverPhoto": "404.jpg",
+  "Status": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68baf7abbf1a7a6638ac74d1"
+  },
+  "Name": "Nguyễn Huân",
+  "Password": "$2b$10$sPnub6dw.FHhhf4Jb.5ZkuYNnxm26QR74f8ZpI31g/4baA2kK2kO.",
+  "SDT": "0369594026",
+  "Avatar": "1757083563050.jpg",
+  "CoverPhoto": "404.jpg",
+  "Status": true,
+  "__v": 0
+}]
