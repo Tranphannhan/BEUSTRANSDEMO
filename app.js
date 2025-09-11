@@ -1,10 +1,17 @@
 const createError = require('http-errors');
 const express = require('express');
+const http = require("http");
+const initWebSocket = require("./Middleware/socket");
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const Router_Demo = require('./routes/Demo');
 const app = express();
+const server = http.createServer(app);
+const cors = require("cors");
+initWebSocket(server);
+
+server.listen(4000, () => console.log("Server chạy tại 4000"));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -13,6 +20,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors({
+  origin: "*", // tất cả domain
+  methods: ["GET","POST","PUT","DELETE","PATCH","OPTIONS"],
+  allowedHeaders: ["Content-Type","Authorization", "X-Requested-With", "Accept"],
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/Demo', Router_Demo);
 
