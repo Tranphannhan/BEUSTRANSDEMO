@@ -6,13 +6,14 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const Router_Demo = require('./routes/Demo');
+const PORT = process.env.PORT
 const app = express();
 const server = http.createServer(app);
 const cors = require("cors");
 initWebSocket(server);
-const PORT = process.env.PORT
 
-server.listen(PORT, () => console.log("Server chạy tại 4000"));
+
+server.listen(PORT, () => console.log(`Server chạy tại ${PORT}`));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
