@@ -10,8 +10,9 @@ const app = express();
 const server = http.createServer(app);
 const cors = require("cors");
 initWebSocket(server);
+const PORT = process.env.PORT
 
-server.listen(4000, () => console.log("Server chạy tại 4000"));
+server.listen(PORT, () => console.log("Server chạy tại 4000"));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
